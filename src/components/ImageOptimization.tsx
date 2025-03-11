@@ -113,7 +113,7 @@ export const ImageOptimization = () => {
             : 'Switch to FastImage'}
         </Text>
       </TouchableOpacity>
-      {!showFastImage ? <FastImageComponent /> : <RNImageComponent />}
+      {showFastImage ? <FastImageComponent /> : <RNImageComponent />}
     </View>
   );
 };

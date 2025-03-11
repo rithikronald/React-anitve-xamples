@@ -9,7 +9,7 @@ export const AsyncRedux = () => {
   const {loading, posts, error} = useSelector(state => state.posts);
 
   useEffect(() => {
-    dispatch(fetchPosts()); // Dispatch the fetchPosts thunk
+    dispatch(fetchPosts()); // Dispatch the fetchPosts thun
   }, [dispatch]);
 
   if (loading) {

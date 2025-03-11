@@ -1,7 +1,7 @@
 import {View, Text, ActivityIndicator} from 'react-native';
 import React from 'react';
 
-function withLoader(Component: React.ComponentType) {
+function withLoader(Component: React.ComponentType<{isLoading: boolean}>) {
   return function ({isLoading, ...props}) {
     if (!isLoading) {
       return <ActivityIndicator size={'large'} />;
@@ -10,7 +10,10 @@ function withLoader(Component: React.ComponentType) {
   };
 }
 
-const DisplayName = ({data, ...props}) => {
+const DisplayName: React.FC<{data: string; isLoading: boolean}> = ({
+  data,
+  ...props
+}) => {
   return (
     <View>
       {props.isLoading ? <ActivityIndicator size={'large'} /> : null}

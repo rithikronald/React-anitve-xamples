@@ -2,6 +2,7 @@ const Question3 = () => {
   const [count, setCount] = useState(0);
   const [lapList, setLapList] = useState([]);
   const interval = useRef<NodeJS.Timeout | null>(null);
+
   const handleOnPress = (action: string) => {
     switch (action) {
       case 'start':
